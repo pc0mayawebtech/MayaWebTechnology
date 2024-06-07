@@ -1,0 +1,11 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.CompnayPortfolio img:hover {
+    transform: scale(1.08);
+    transition: all .5s ease-in-out;
+}

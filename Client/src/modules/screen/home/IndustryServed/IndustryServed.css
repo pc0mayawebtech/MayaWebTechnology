@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.IndustryInclude .IndustrySector {
+    background-color: var(--fadepink);
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.IndustryInclude .changeColor {
+    background-color: var(--red);
+    font-weight: 600;
+    color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.IndustryInclude .changeColor .sectorName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.IndustryInclude .changeColor img {
+    width: 100%;
+    height: auto;
+}
+
+.IndustryInclude .changeColor .sectorInfo{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.IndustryInclude .IndustrySector .IndustryOuterWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.IndustryInclude .IndustrySector img {
+    width: 100%;
+    height: auto;
+}
+
+.IndustryInclude .IndustrySector .sectorName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.IndustryInclude .IndustrySector .sectorInfo {
+    width: 100%;
+    margin-bottom: 0px;
+}

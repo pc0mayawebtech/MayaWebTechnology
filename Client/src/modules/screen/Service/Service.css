@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+/******************SERVICE CARD SECTION START********************/
+.ServiceProvided .serviceTitle{
+    text-align: center;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+}
+
+/******************TECHNOLOGY SERVICE SECTION START******************/
+
+.Technology {
+    position: relative;
+    width: 100%;
+}
+
+.Technology .techWrapper .Techhead {
+    color: var(--red);
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.6;
+}
+
+.Technology .techWrapper .TechCont {
+    font-size: 1rem;
+    line-height: 2;
+    color: var(--para-text-color);
+    font-weight: 600;
+}
+
+.Technology .back1 {
+    background-color: var(--lightpink);
+}
+
+.Technology .back2 {
+    background-color: #ffffff;
+}
+
+.Technology .back3 {
+    background-color: var(--lightpink);
+}
