@@ -66,8 +66,8 @@ const Home = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="companyInfo">
-                                <h1 className='leftMarketInfo animate__animated animate__backInDown'>We do Digital Transformation with Bespoke Solutions</h1>
-                                <p className='leftKnowledgeVariety animate__animated animate__backInLeft animate__delay-1s'>We Develop CRM/ ERP/ CMS/ TMS/ LMS/ eCommerce/ Plugins/ Extensions/ Reporting/ Insights/ Integrations.</p>
+                                <h1 className='leftMarketInfo animate__animated animate__backInDown'>Ultimate Web Designing Services</h1>
+                                <p className='leftKnowledgeVariety animate__animated animate__backInLeft animate__delay-1s'>We are the right web designing service provider for all your website needs. We provide you with endless flexible options to choose from with our available services.</p>
                             </div>
                             <div className="siteReview">
                                 <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussSite'><span>Let us Discuss</span></button></Link>
