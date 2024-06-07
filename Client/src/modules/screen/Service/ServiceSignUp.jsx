@@ -98,7 +98,6 @@ const ServiceSignUp = ({ option1, option2, option3, option4 }) => {
                             <label htmlFor="radio4" className='formControl'>{option4}</label>
                         </div>
                     </div>
-                    <button type="submit" className='submitway mt-4'><span>Submit Now</span></button>
                 </div>
             </div>
         </section>
