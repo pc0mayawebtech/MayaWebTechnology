@@ -3,14 +3,15 @@ import './Form.css';
 import { countries } from './country.js';
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.jsx';
-import axios from 'axios';
+import { db } from '../../../../firebase.config.js';
+import { collection, addDoc } from 'firebase/firestore';
 
 const Form = () => {
     const [country, setCountry] = useState('');
     const handleCountryChange = (e) => {
         setCountry(e.target.value);
     };
-
+    const dbref = collection(db, 'ContactPageForm')
     const initialValues = {
         fullname: "",
         email: "",
@@ -22,22 +23,13 @@ const Form = () => {
         initialValues: initialValues,
         validationSchema: signUpSchema,
         onSubmit: (values, { resetForm }) => {
-            axios.get('http://localhost:8000/maya', {
-                params: {
-                    fullname: values.fullname,
-                    number: values.number,
-                    email: values.email,
-                    Message: values.Message,
-                }
-            })
-                .then(() => {
-                    alert('Your Form submitted successfully!');
-                    resetForm();
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('Failed to submit the form. Please try again.');
-                });
+            try {
+                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.Message })
+                alert('Data Added Sucessfuly');
+                resetForm();
+            } catch (error) {
+                alert('Failed to submit the form. Please try again');
+            }
         },
     });
     return (

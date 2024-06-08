@@ -2,9 +2,12 @@
 import './ConnectForm.css';
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.jsx';
-import axios from 'axios';
+import { db } from '../../../../firebase.config.js';
+import { collection, addDoc } from 'firebase/firestore';
+// import axios from 'axios';
 
 const ConnectForm = () => {
+    const dbref = collection(db, 'HomePageForm')
     const initialValues = {
         fullname: "",
         number: "",
@@ -16,22 +19,13 @@ const ConnectForm = () => {
         initialValues: initialValues,
         validationSchema: signUpSchema,
         onSubmit: (values, { resetForm }) => {
-            axios.get('http://localhost:8000/maya', {
-                params: {
-                    fullname: values.fullname,
-                    number: values.number,
-                    email: values.email,
-                    addinfo: values.addinfo,
-                }
-            })
-                .then(() => {
-                    alert('Your Form submitted successfully!');
-                    resetForm();
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('Failed to submit the form. Please try again.');
-                });
+            try {
+                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.addinfo })
+                alert('Data Added Sucessfuly');
+                resetForm();
+            } catch (error) {
+                alert('Failed to submit the form. Please try again');
+            }
         },
     });
 
