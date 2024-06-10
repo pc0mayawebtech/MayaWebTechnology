@@ -249,8 +249,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        margin-top: 2rem;
-        padding: 0rem 0rem;
+        margin-top: 5rem;
     }
 
     .Development .RightDevelopContent .innerMainHead {
@@ -259,7 +258,7 @@
 
     .ServiceVarity .videoheader {
         position: relative;
-        height: 500px;
+        height: 600px;
     }
 
     .MobileMethodlogy .InnerHead {

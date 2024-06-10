@@ -6,17 +6,7 @@ const PrivacyPolicy = () => {
     }, [])
     return (
         <>
-            <section className='PivacyPolicy'>
-                <div className='PrivacyBanner'>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className='privacyHead'>Privacy Policy</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='heroWrpper'>
+            <section className='heroWrpper' style={{marginTop:"8rem"}}>
                 <div className="container">
                     <div className='firstBox mb-3'>
                         <h2 className='headWrapperBox'>Privacy Policy</h2>

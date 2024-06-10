@@ -1,6 +1,7 @@
 import './Product.css';
 import { useEffect } from 'react';
 import ProductCategory from './ProductCategory/ProductCategory';
+import { motion, useScroll } from "framer-motion";
 import productcategory from '../../../assets/images/productcategory.png'
 import productcategory3 from '../../../assets/images/productcategory3.png';
 import productcategory4 from '../../../assets/images/productcategory4.jpg';
@@ -12,11 +13,25 @@ import productcategory10 from '../../../assets/images/productcategory10.jpg';
 import productcategory11 from '../../../assets/images/productcategory11.jpg';
 
 const Product = () => {
+    const { scrollYProgress } = useScroll();
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
     return (
         <>
+            <motion.div
+                className="progress-bar"
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '4px',
+                    backgroundColor: '#9C1133',
+                    scaleX: scrollYProgress,
+                    zIndex: 9999,
+                }}
+            />
             <section className='ProductList mb-5'>
                 <div className="container">
                     <div className="Category">

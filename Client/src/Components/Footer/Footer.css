@@ -74,3 +74,12 @@
 .FooterBanner .socialIcon i:hover {
     color: var(--red);
 }
+
+
+/**************MEDIA QUERY SECTION START************/
+
+@media(max-width:991px) {
+    .FooterBanner .footer-widget {
+        margin: 20px 0px;
+    }
+}

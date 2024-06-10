@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import 'animate.css';
 import CardBox from './ServiceCardBox/CardBox';
+import { motion, useScroll } from 'framer-motion';
 import dataanalysis from '../../../assets/images/analysisdata.webp';
 import UIDesign from '../../../assets/images/UI-designing.png';
 import Seo from '../../../assets/images/seo-services.png';
@@ -31,14 +32,27 @@ import figmalogo from '../../../assets/images/Figmalogo.png';
 import Adobelogo from '../../../assets/images/Adobelogo.png';
 
 const Service = () => {
-
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   return (
     <>
-      <section className="ServiceProvided mb-5" style={{marginTop:"8rem"}}>
+      <motion.div
+        className="progress-bar"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '4px',
+          backgroundColor: '#9C1133',
+          scaleX: scrollYProgress,
+          zIndex: 9999,
+        }}
+      />
+      <section className="ServiceProvided mb-5" style={{ marginTop: "8rem" }}>
         <div className="container">
           <div>
             <h2 className='serviceTitle animate__animated animate__backInLeft'>Our Services</h2>

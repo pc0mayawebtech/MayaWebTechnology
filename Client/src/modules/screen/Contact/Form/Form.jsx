@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Form.css';
 import { countries } from './country.js';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.jsx';
 import { db } from '../../../../firebase.config.js';
@@ -11,7 +13,7 @@ const Form = () => {
     const handleCountryChange = (e) => {
         setCountry(e.target.value);
     };
-    const dbref = collection(db, 'ContactPageForm')
+    const dbref = collection(db, 'ContactPageForm');
     const initialValues = {
         fullname: "",
         email: "",
@@ -19,16 +21,29 @@ const Form = () => {
         Message: "",
     }
 
+    const notifySuccess = () => {
+        toast.success("Data Added Successfully", {
+            position: "top-right"
+        });
+    };
+
+    const notifyError = () => {
+        toast.error("Failed to submit the form", {
+            position: "top-right"
+        });
+    };
+
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
         validationSchema: signUpSchema,
         onSubmit: (values, { resetForm }) => {
             try {
-                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.Message })
-                alert('Data Added Sucessfuly');
+                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.Message });
+                notifySuccess();
                 resetForm();
             } catch (error) {
-                alert('Failed to submit the form. Please try again');
+                notifyError();
+                console.log('Failed to submit the form');
             }
         },
     });
@@ -63,9 +78,10 @@ const Form = () => {
                     <div className='FormInput'>
                         <textarea name="Message" value={values.Message} id="Message" cols="30" rows="3" placeholder='Tell us about your developemnt needs. (Optional)' onChange={handleChange} onBlur={handleBlur}></textarea>
                     </div>
-                    <div className='FormInput'>
+                    <div className='FormInput mb-4'>
                         <button className='Submitbtn' type='submit'><span>Submit</span></button>
                     </div>
+                    <ToastContainer />
                 </form>
             </div>
         </>

@@ -1,15 +1,30 @@
 import { useEffect } from 'react';
 import './Contact.css';
 import contactView from '../../../assets/video/contactview.mp4';
+import { motion, useScroll } from "framer-motion";
 import Form from './Form/Form';
 import EnquiryCard from './EnquiryCard/EnquiryCard';
 import { Slide } from 'react-awesome-reveal';
 const Contact = () => {
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <>
+      <motion.div
+        className="progress-bar"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '4px',
+          backgroundColor: '#9C1133',
+          scaleX: scrollYProgress,
+          zIndex: 9999,
+        }}
+      />
       <section className='EnquiryMenu mt-5'>
         <div className="container">
           <div className='row'>
@@ -40,8 +55,8 @@ const Contact = () => {
               <div className='ContactTouch'>
                 <h2 className='TalkUs'>Let us talk</h2>
                 <p className='ReachUs'>Please fill out the form or email at info@mayawebtech.com</p>
-                <video autoPlay loop>
-                  <source src={contactView} alt="contactView" className='w-100' type='video/mp4' />
+                <video autoPlay loop className='w-100'>
+                  <source src={contactView} alt="contactView" type='video/mp4' />
                 </video>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import './MobileDevelop.css';
 import { Slide } from 'react-awesome-reveal';
 import servicevideo from '../../../assets/video/servicevideo.mp4';
+import { motion, useScroll } from 'framer-motion';
 import ServiceFacility from './ServiceFacility/ServiceFacility';
 import ServiceSuccess from './ServiceStorySucess/ServiceSuccess';
 import DevelopmentApp from './DevelopmentApp';
@@ -24,11 +25,25 @@ import mobileapp6 from '../../../assets/images/mobileapp6.png';
 import mobileapp7 from '../../../assets/images/mobileapp7.png';
 import { useEffect } from 'react';
 const MobileDevelop = () => {
+    const { scrollYProgress } = useScroll();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     return (
         <>
+            <motion.div
+                className="progress-bar"
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '4px',
+                    backgroundColor: '#9C1133',
+                    scaleX: scrollYProgress,
+                    zIndex: 9999,
+                }}
+            />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
@@ -42,7 +57,7 @@ const MobileDevelop = () => {
                     <div className='row'>
                         <div className='videoContainer'>
                             <h1 className='head-title'>Mobile app development services</h1>
-                            <p className='headsub-title'>Mobile app development services are the most important process of the creation of software applications that run on mobile devices. We are the leading app development firm with all the available mobile app development services types including Android app development and iOS development for different types of mobile devices. We are the governing web development services provider and we make sure to fulfill the demands of the app development services to provide growth to the customers.</p>
+                            <p className='headsub-title'>Mobile app development services are the most important process of the creation of software applications that run on mobile devices. We are the leading app development firm with all the available mobile app development services types including Android app development and iOS development for different types of mobile devices.</p>
                         </div>
                     </div>
                 </div>

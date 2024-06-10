@@ -1,7 +1,7 @@
 import './Home.css';
 import 'animate.css';
 import { motion, useScroll } from "framer-motion";
-import { useState, useEffect } from 'react';
+import {useState,useEffect } from 'react';
 import { Fade, Roll, Slide } from "react-awesome-reveal";
 import thumbsolid1 from '../../../assets/images/thumbsolid1.webp';
 import thumbsolid2 from '../../../assets/images/thumbsolid2.webp';

@@ -1,47 +1,46 @@
 import './ServiceSignUp.css';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.js';
-import axios from 'axios';
+import { db } from '../../../firebase.config.js';
+import { collection, addDoc } from 'firebase/firestore';
 
 // eslint-disable-next-line react/prop-types
-const ServiceSignUp = ({ option1, option2, option3, option4 }) => {
-
+const ServiceSignUp = () => {
+    const dbref = collection(db, 'ContactPageForm');
     const initialValues = {
         fullname: "",
         email: "",
         cName: "",
         mobile: "",
-        radiotick1: "",
-        radiotick2: "",
-        radiotick3: "",
-        radiotick4: "",
-
+        service: "",
     }
+
+    const notifySuccess = () => {
+        toast.success("Data Added Successfully", {
+            position: "top-right"
+        });
+    };
+
+    const notifyError = () => {
+        toast.error("Failed to submit the form", {
+            position: "top-right"
+        });
+    };
+
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
         validationSchema: signUpSchema,
         onSubmit: (values, { resetForm }) => {
-            axios.get('http://localhost:8000/maya', {
-                params: {
-                    fullname: values.fullname,
-                    email: values.email,
-                    cName: values.cName,
-                    mobile: values.mobile,
-                    radiotick1: values.radiotick1,
-                    radiotick2: values.radiotick2,
-                    radiotick3: values.radiotick3,
-                    radiotick4: values.radiotick4,
-                }
-            })
-                .then(() => {
-                    alert('Your Form submitted successfully!');
-                    resetForm();
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('Failed to submit the form. Please try again.');
-                });
+            try {
+                addDoc(dbref, { Name: values.fullname, Number: values.mobile, Email: values.email, AddInfo: values.cName, Service: values.service });
+                notifySuccess();
+                resetForm();
+            } catch (error) {
+                notifyError();
+            }
         },
     });
 
@@ -52,7 +51,7 @@ const ServiceSignUp = ({ option1, option2, option3, option4 }) => {
                     <h2 className='signHead'>Sign Up</h2>
                 </div>
                 <div className="row mb-4">
-                    <div className="col-lg-7 col-md-12 col-sm-12 col-12">
+                    <div className="col-lg-7 col-md-12 col-sm-12 col-12 m-auto">
                         <form action="./action.php" method='post' onSubmit={handleSubmit}>
                             <div className='formWrapper'>
                                 <label htmlFor="fullname" className='labelControl'>Full Name</label>
@@ -69,34 +68,24 @@ const ServiceSignUp = ({ option1, option2, option3, option4 }) => {
                                 <input type="text" name="cName" value={values.cName} id="cName" className='formControl' onChange={handleChange} onBlur={handleBlur} />
                                 {errors.cName && touched.cName ? (<p className='formError'>{errors.cName}</p>) : null}
                             </div>
-                            <div className='formWrapper'>
+                            <div className='formWrapper mb-3'>
                                 <label htmlFor="mobile" className='labelControl'>Phone Number</label>
                                 <input type="tel" name="mobile" value={values.mobile} id="mobile" className='formControl' onChange={handleChange} onBlur={handleBlur} />
                                 {errors.mobile && touched.mobile ? (<p className='formError'>{errors.mobile}</p>) : null}
                             </div>
+                            <div className='formWrapper'>
+                                <select name="service" id="service" value={values.service} className='formControl' style={{ height: "40px" }} onChange={handleChange} onBlur={handleBlur}>
+                                    <option value="">------Select Services------</option>
+                                    <option value="Dedicated mobile app development">Dedicated mobile app development</option>
+                                    <option value="Mobile app designing">Mobile app designing</option>
+                                    <option value="Mobile app maintenancece">Mobile app maintenancece</option>
+                                    <option value="Mobile app furnishing">Mobile app furnishing</option>
+                                </select>
+                                {errors.service && touched.service ? (<p className='formError'>{errors.service}</p>) : null}
+                            </div>
                             <button type="submit" className='submitway submitway2 mt-4'><span>Submit Now</span></button>
+                            <ToastContainer />
                         </form>
-                    </div>
-                    <div className="col-lg-5 col-md-12 col-sm-12 col-12">
-                        <div>
-                            <h4 className='Serviceinfo'>Service</h4>
-                        </div>
-                        <div className='radioWrapper mb-5'>
-                            <input type="radio" name="radiotick1" value={values.radiotick1} id="radio1" onChange={handleChange} onBlur={handleBlur} />
-                            <label htmlFor="radio1" className='formControl'>{option1}</label>
-                        </div>
-                        <div className='radioWrapper mb-5'>
-                            <input type="radio" name="radiotick2" value={values.radiotick2} id="radio2" onChange={handleChange} onBlur={handleBlur} />
-                            <label htmlFor="radio2" className='formControl'>{option2}</label>
-                        </div>
-                        <div className='radioWrapper mb-5'>
-                            <input type="radio" name="radiotic3" value={values.radiotick3} id="radio3" onChange={handleChange} onBlur={handleBlur} />
-                            <label htmlFor="radio3" className='formControl'>{option3}</label>
-                        </div>
-                        <div className='radioWrapper'>
-                            <input type="radio" name="radiotic4" value={values.radiotick4} id="radio4" onChange={handleChange} onBlur={handleBlur} />
-                            <label htmlFor="radio4" className='formControl'>{option4}</label>
-                        </div>
                     </div>
                 </div>
             </div>

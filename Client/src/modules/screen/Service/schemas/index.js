@@ -5,4 +5,5 @@ export const signUpSchema = object({
     email: string().email('Invalid Email').required('Please Enter Your Email'),
     cName: string().min(2, 'Name is Too Short').max(20, 'Name is Too Long').required('Please Enter Company Name'),
     mobile: string().min(10, 'Must be exactly 10 digits').max(10, 'Must be exactly 10 digits').required('Please Enter Your Mobile Number').matches(/^[6-9]{1}[0-9]{9}/, 'Invalid Number'),
+    service: string().required('please Select The Services'),
 })

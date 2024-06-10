@@ -534,6 +534,12 @@
 
 /*************MEDIA QUERY SECTION START*************/
 @media(max-width:991px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .Achivements .AchivementDeliver {
         display: block;
         text-align: start;
@@ -578,7 +584,26 @@
     }
 
     .TopMarketConsult .thumblogo1 {
+        height: 340px;
+        width: 340px;
+        margin: auto;
+        border: 1px dashed blue;
+        border-radius: 50%;
         position: relative;
-        left: -25px;
+        animation: slider 1s infinite alternate;
+        z-index: -1;
+    }
+
+    .TopMarketConsult .carousel-inner .carousel-item img {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        margin: 0px;
+        position: fixed;
+    }
+
+    .companyBrand .photobanner img {
+        margin: 0 3em;
+        height: 11vh;
     }
 }

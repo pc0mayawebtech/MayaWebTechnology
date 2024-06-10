@@ -5,17 +5,6 @@
     list-style-type: none;
 }
 
-.PivacyPolicy {
-    background-image: url('../../../assets/Images/policybannerbg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s ease;
-    height: 500px;
-    width: 100%;
-    position: relative;
-}
-
 .PivacyPolicy .PrivacyBanner .privacyHead {
     color: var(--white);
     position: absolute;

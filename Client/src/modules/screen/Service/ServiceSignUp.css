@@ -29,29 +29,6 @@
     margin-bottom: 1rem;
 }
 
-.SignUp .Serviceinfo {
-    color: var(--white);
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.SignUp .radioWrapper .formControl {
-    font-size: 1.2rem;
-    color: var(--white);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    margin-left: 0.6rem;
-}
-
-.SignUp .responseTime {
-    text-align: center;
-    color: var(--white);
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
 .SignUp .submitway {
     display: block;
     background-color: var(--white);
@@ -100,27 +77,33 @@
 }
 
 .SignUp .formWrapper .formError {
-    color: var(--white);
+    color: red;
     font-size: 0.8rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
 }
+
+.displayMessage {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/*************MEDIA QUERY SECTION START*************/
 
 @media (max-width:991px) {
     .SignUp .submitway {
         width: 100%;
     }
 
-    .SignUp .submitway2 {
-        display: none;
-    }
-
-    .SignUp .radioWrapper{
+    .SignUp .radioWrapper {
         display: flex;
         align-items: baseline;
     }
 
-    .SignUp .FormWrapper{
+    .SignUp .FormWrapper {
         margin-bottom: 1rem;
     }
 }

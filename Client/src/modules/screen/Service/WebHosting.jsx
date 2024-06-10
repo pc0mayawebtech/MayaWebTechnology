@@ -1,6 +1,7 @@
 import './MobileDevelop.css';
 import { useEffect } from 'react';
 import servicevideo from '../../../assets/video/servicevideo.mp4';
+import { motion, useScroll } from 'framer-motion';
 import { Slide } from 'react-awesome-reveal';
 import ServiceFacility from './ServiceFacility/ServiceFacility';
 import ServiceSuccess from './ServiceStorySucess/ServiceSuccess';
@@ -24,11 +25,25 @@ import webservice5 from '../../../assets/images/webservice5.png';
 import webservice6 from '../../../assets/images/webservice6.png';
 import webservice7 from '../../../assets/images/webservice7.jpeg';
 const WebHosting = () => {
+    const { scrollYProgress } = useScroll();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     return (
         <>
+            <motion.div
+                className="progress-bar"
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '4px',
+                    backgroundColor: '#9C1133',
+                    scaleX: scrollYProgress,
+                    zIndex: 9999,
+                }}
+            />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">

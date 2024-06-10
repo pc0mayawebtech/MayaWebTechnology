@@ -109,3 +109,9 @@
     font-weight: 700;
     margin-bottom: 0.6rem;
 }
+
+
+/************MEDIA QUERY CSS SECTION START************/
+.FormInput .Submitbtn {
+    width: 100%;
+}

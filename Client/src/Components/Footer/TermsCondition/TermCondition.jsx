@@ -7,17 +7,7 @@ const TermCondition = () => {
     }, [])
     return (
         <>
-            <section className='TermsCondition'>
-                <div className='TermBanner'>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className='termHead'>Terms & Conditions</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='heroWrpper'>
+            <section className='heroWrpper' style={{marginTop:"8rem"}}>
                 <div className="container">
                     <div className='firstBox mb-3'>
                         <h2 className='headWrapperBox'>Terms & Conditions</h2>

@@ -6,19 +6,9 @@ const RefundPolicy = () => {
     }, [])
     return (
         <>
-            <section className='refundPolicy'>
-                <div className='refundBanner'>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className='refundHead'>Refund Policy</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='heroWrpper'>
+            <section className='heroWrpper' style={{marginTop:"8rem"}}>
                 <div className="container">
-                    <div className='firstBox mb-5'>
+                    <div className='firstBox mb-lg-5 mb-sm-0 mb-md-0'>
                         <h2 className='headWrapperBox'>REFUND POLICY</h2>
                         <p className='contWrapperBox'>if service not provided within 7 Working days, timing mentions in email, Payment will be refund on your Account,</p>
                         <p className='contWrapperBox'>which contract specifically with the issuer (Maya Web Tech is the issuer in this case) to accept the payment instrument. These instruments do not permit cash withdrawal or redemption by the customer.</p>

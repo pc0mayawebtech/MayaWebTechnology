@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 import './ConnectForm.css';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.jsx';
 import { db } from '../../../../firebase.config.js';
@@ -7,7 +9,7 @@ import { collection, addDoc } from 'firebase/firestore';
 // import axios from 'axios';
 
 const ConnectForm = () => {
-    const dbref = collection(db, 'HomePageForm')
+    const dbref = collection(db, 'HomePageForm');
     const initialValues = {
         fullname: "",
         number: "",
@@ -15,16 +17,28 @@ const ConnectForm = () => {
         addinfo: "",
     };
 
+    const notifySuccess = () => {
+        toast.success("Data Added Successfully", {
+            position: "top-right"
+        });
+    };
+
+    const notifyError = () => {
+        toast.error("Failed to submit the form", {
+            position: "top-right"
+        });
+    };
+
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
         validationSchema: signUpSchema,
         onSubmit: (values, { resetForm }) => {
             try {
-                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.addinfo })
-                alert('Data Added Sucessfuly');
+                addDoc(dbref, { Name: values.fullname, Number: values.number, Email: values.email, AddInfo: values.addinfo });
+                notifySuccess();
                 resetForm();
             } catch (error) {
-                alert('Failed to submit the form. Please try again');
+                notifyError();
             }
         },
     });
@@ -86,9 +100,10 @@ const ConnectForm = () => {
                             onBlur={handleBlur}
                         ></textarea>
                     </div>
-                    <div className="formWrapper">
+                    <div className="formWrapper mb-4">
                         <button type='submit' className='sbtButton'><span>Submit</span></button>
                     </div>
+                    <ToastContainer />
                 </form>
             </section>
         </>

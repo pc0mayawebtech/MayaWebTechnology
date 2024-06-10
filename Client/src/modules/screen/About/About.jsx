@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './About.css';
 import CompanyWork from './company-work/CompanyWork';
+import { motion, useScroll } from "framer-motion";
 import innerlogo from '../../../assets/images/chooseinnerlogo.png';
 import client from '../../../assets/images/clients1.png';
 import project from '../../../assets/images/projects.png';
@@ -10,11 +11,25 @@ import WorkProcess from './WorkProcess/WorkProcess';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-awesome-reveal';
 const About = () => {
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <>
+      <motion.div
+        className="progress-bar"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '4px',
+          backgroundColor: '#9C1133',
+          scaleX: scrollYProgress,
+          zIndex: 9999,
+        }}
+      />
       <section className='heroWrapper mb-5' style={{ marginTop: '8rem' }}>
         <div className="container">
           <div>
@@ -120,7 +135,7 @@ const About = () => {
                 <p className='abtbusineeslayer'>Domain Names Services with competitive prices.Hosting is like the intermediate between the website.Today’s world is the world innovation and creativity. Graphic Design is the combination of creativity, technical knowledge, and research skills.</p>
               </div>
               <div>
-                <Link to="tel:+919824620234" inputMode='numeric' className='innerContact' style={{textDecoration:"none"}}><button className='Connectbtn'>
+                <Link to="tel:+919824620234" inputMode='numeric' className='innerContact' style={{ textDecoration: "none" }}><button className='Connectbtn'>
                   <span>Contact Me</span>
                 </button></Link>
               </div>
