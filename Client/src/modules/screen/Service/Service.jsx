@@ -77,7 +77,7 @@ const Service = () => {
             <div className="col-lg-6">
               <div className="techWrapper">
                 <h2 className='Techhead'>TOOLS & TECHNOLOGIES OUR SOFTWARE DEVELOPERS USE</h2>
-                <p className='TechCont'>Intellectsoft has grown into an international contestant in software engineering with wide-ranging expertise in all the areas needed for reliable software development.</p>
+                <p className='TechCont'>Maya Web Tech has grown into an international contestant in software engineering with wide-ranging expertise in all the areas needed for reliable software development.</p>
               </div>
             </div>
             <div className="col-lg-6">

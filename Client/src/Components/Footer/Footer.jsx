@@ -23,7 +23,7 @@ const Footer = () => {
                   <Link to="https://www.linkedin.com/company/96414344/admin/feed/posts/"><i className="fa-brands fa-linkedin fa-xl"></i></Link>
                 </div>
               </div>
-              <UsefulLink link1="/" link2="/app/service" link3="/app/about" link4="/app/contact" link5="/app/product" title="Quick Links" listlink="Home" listlink2="Services" listlink3="About" listlink4="Contact" listlink5="Product" icon=<i className='fa-solid fa-angles-right'></i> />
+              <UsefulLink link1="/" link2="/app/service" link3="/app/about" link4="/app/contact" link5="/app/product" title="Quick Links" listlink="Home" listlink2="Services" listlink3="About" listlink4="Contact" icon=<i className='fa-solid fa-angles-right'></i> />
               <UsefulLink link1="/app/privacypolicy" link2="/app/refundpolicy" link3="/app/term-condition" link4="/app/disclaimer" title="Useful Links" listlink="Privacy Policy" listlink2="Refund Policy" listlink3="Terms & Conditions" listlink4="Disclaimer" icon=<i className='fa-solid fa-angles-right'></i> />
               <div className="col-lg-3 footer-widget">
                 <div className='CompnayData'>

@@ -85,9 +85,9 @@
     width: 100%;
 }
 
-.NavBar .navigatebar ul li:focus-within>ul,
+.NavBar .navigatebar ul li:focus-within>,
 .NavBar .navigatebar ul li:hover>ul {
-    display: initial !important;
+    display: initial;
 }
 
 #logo {
@@ -156,6 +156,20 @@
     border-radius: 6px;
 }
 
+.innersect {
+    display: none;
+}
+
+.innersectOpen {
+    display: block;
+}
+
+.navigatebar ul li:hover .innersect,
+.navigatebar ul li .innersect:focus-within {
+    display: block;
+}
+
+
 @media screen and (max-width:991px) {
     .NavBar {
         padding: 10px;
@@ -220,5 +234,11 @@
         color: var(--white);
         transition: all .5s ease-in-out;
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigatebar ul li .innersect {
+        display: none;
     }
 }

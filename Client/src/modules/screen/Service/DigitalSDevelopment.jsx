@@ -24,6 +24,8 @@ import marketingservice4 from '../../../assets/images/marketingservice4.png';
 import marketingservice5 from '../../../assets/images/marketingservice5.png';
 import marketingservice6 from '../../../assets/images/marketingservice6.png';
 import marketingservice7 from '../../../assets/images/marketingservice7.png';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 const DigitalSDevelopment = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -44,11 +46,12 @@ const DigitalSDevelopment = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay={true} muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const DigitalSDevelopment = () => {
                                 <p className='innerMainContent'>We are a digital marketing agency that has all the available tools and techniques for online marketing and not only that but we also make sure that we serve the different types of digital marketing strategies to meet all the demands of our customers and provide them with a path to achieve success. Also, we have a team of dedicated experts to gain success right.</p>
                                 <p className='innerMainContent'>We have a team of experts who ensure that our customers are provided with all the tools and techniques that help them to gain success in the long run. We make sure to provide them with dedicated results and personalized attention so that they can get digital marketing services near me to make their experience valuable and achieve growth and success along with that. We also make sure that we are here to help our customers with online digital marketing to allow them to gain sales.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -233,7 +236,7 @@ const DigitalSDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>User-friendly Content</h4>
                                     <p className='methodCont'>We make sure that all of the web designing services that we provide are the ones that provide the customers with user-friendly content that can easily target their audience after making them learn about the services they provide. We as a digital marketing company make sure that we provide the best user-friendly content that serves the customers needs and provides them with the success they want.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const DigitalSDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Security</h4>
                                     <p className='methodCont'>We make sure that being a digital marketing agency it is our duty to provide safety and security to our customers that they need with the web designing services and digital marketing services. We always ensure the security that our customers need to maintain the data with their audience and know where their audience is coming from and that takes time and tools we have so we provide them with the solution that lets them enjoy results.</p>
                                 </Slide>

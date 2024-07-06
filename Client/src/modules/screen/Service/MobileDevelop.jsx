@@ -24,6 +24,8 @@ import mobileapp5 from '../../../assets/images/mobileapp5.png';
 import mobileapp6 from '../../../assets/images/mobileapp6.png';
 import mobileapp7 from '../../../assets/images/mobileapp7.png';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Header from '../../../Components/Header/Header';
 const MobileDevelop = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -44,11 +46,12 @@ const MobileDevelop = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const MobileDevelop = () => {
                                 <p className='innerMainContent'>We serve the two types of dominant platforms for mobile app development services. One of them is the iOS platform from Apple Inc. The iOS platform is the operating system that powers Apples popular line of smartphones. The second one is Android from Google. The Android operating system is used not only by Google devices but also by many other OEMs to buy smartphones and other smart devices.</p>
                                 <p className='innerMainContent'>However, there are some similarities between the two platforms while building the applications, developing for iOS vs developing for Android involves using different software development kits and different development toolchains which we have as being the the best app development companies. While Apple uses iOS exclusively for its devices, google makes Android available for the companies that provide specific requirements such as including certain Google applications on devices they ship. We as a mobile app development company can build apps for hundreds or millions of devices.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{textDecoration:"none"}}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -153,7 +156,7 @@ const MobileDevelop = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Right prices</h4>
                                     <p className='methodCont'>We assure our customers that we provide them the results with the right prices at which they choose our services. We are here to make sure that we can provide mobile app development that includes Android app development and iOS app development to our customers with the best prices in the market. Our services come with the right technology and we can affirm that our price is not there to be found out in the market.</p>
                                 </Slide>
@@ -173,7 +176,7 @@ const MobileDevelop = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Consultations</h4>
                                     <p className='methodCont'>We as a leading mobile app development company make sure that we understand the customer’s needs before planning and conceptualizing them. We make it our priority that we provide our customers with a free consultation in which we both can talk and understand the whole process before moving on to something and it also makes sure that we are able to let our customers understand the mobile app development services that we will be using.</p>
                                 </Slide>
@@ -183,7 +186,7 @@ const MobileDevelop = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Simple and easy UI and UX</h4>
                                     <p className='methodCont'>We are a former mobile app development service provider and that is why we understand that creating a web app or mobile app with simple and easy UI and UX plays a vital role during the launch of the app. The simplicity turns out to be so light on the customer’s pocket that they don’t think twice about installing the app on their devices due to the low memory from their devices. Thus, the simple process also trans to the success of our customers.</p>
                                 </Slide>
@@ -203,7 +206,7 @@ const MobileDevelop = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Timely Delivery</h4>
                                     <p className='methodCont'>We assure our customers of the timely delivery of the mobile app services that they want. We take the time to plan, create, process, finalize, and launch the app but we make sure that it all gets done in the right time without any failures. We do make sure that being an app development firm we are here to provide our customers with the strategic services that they make sure to choose with us and we provide them with information on all the steps</p>
                                 </Slide>
@@ -213,7 +216,7 @@ const MobileDevelop = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Transparent Process</h4>
                                     <p className='methodCont'>We have a team of front end and back end and they both make sure that the data is received and processed to the user and client end with respectively no errors in between. The process that we use to provide mobile app development services is a transparent process and by that, we make sure to tell our customers the right and wrong in all the steps as we are a leading mobile app development services provider.</p>
                                 </Slide>
@@ -233,7 +236,7 @@ const MobileDevelop = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Secure and achievable</h4>
                                     <p className='methodCont'>We as a mobile app development company make sure that our customers can secure and achieve their dreams of the mobile app that they want to have to gain success. We make sure that providing them with our mobile development services and achieving success is not hard for us as we provide everything from our end to our customers by which they can stay connected to their customers without any additional effort.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const MobileDevelop = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Experienced team</h4>
                                     <p className='methodCont'>We as the best mobile app development company make sure to hire experienced staff in our team that can easily work on our customer’s needs. We also make sure that our experienced staff provides their knowledge to the customers in making them fulfil their dream of getting the best app development that they want to achieve. We have experienced staff on our team who also makes sure to use the right tools, techniques, and strategies for our customers.</p>
                                 </Slide>

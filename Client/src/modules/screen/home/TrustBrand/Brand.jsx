@@ -10,7 +10,7 @@ const Brand = () => {
         <>
             <section className='companyBrand mt-5 mb-5'>
                 <div id="container">
-                    <div class="photobanner">
+                    <div className="photobanner">
                         <img src={brand1} alt="brand1" />
                         <img src={brand2} alt="brand2" />
                         <img src={brand3} alt="brand3" />

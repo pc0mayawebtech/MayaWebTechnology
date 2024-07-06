@@ -2,7 +2,7 @@ import './UsefullLink.css';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-const UsefulLink = ({ title, listlink, listlink2, listlink3, listlink4, listlink5, icon, link1, link2, link3, link4, link5 }) => {
+const UsefulLink = ({ title, listlink, listlink2, listlink3, listlink4, icon, link1, link2, link3, link4 }) => {
     return (
         <>
             <div className='col-lg-3 footer-widget'>
@@ -13,10 +13,7 @@ const UsefulLink = ({ title, listlink, listlink2, listlink3, listlink4, listlink
                         <ul>
                             <li><Link to={link1} className='innerfwrapper'>{icon} {listlink}</Link></li>
                             <li><Link to={link2} className='innerfwrapper'>{icon} {listlink2}</Link></li>
-                            <li><Link to={link3} className='innerfwrapper'>{icon} {listlink3}</Link></li>                            
-                            {listlink5 && link5 &&
-                                <li> <Link to={link5} className='innerfwrapper'>{icon} {listlink5}</Link></li>
-                            }
+                            <li><Link to={link3} className='innerfwrapper'>{icon} {listlink3}</Link></li>
                             <li><Link to={link4} className='innerfwrapper'>{icon} {listlink4}</Link></li>
                         </ul>
                     </div>

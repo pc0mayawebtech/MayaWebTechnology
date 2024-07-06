@@ -56,7 +56,7 @@ const Form = () => {
                         {errors.fullname && touched.fullname ? (<p className='formError'>{errors.fullname}</p>) : null}
                     </div>
                     <div className='FormInput'>
-                        <input type="email" name="email" value={values.email} id="email" placeholder='Email' onChange={handleChange} onBlur={handleBlur} />
+                        <input type="email" name="email" value={values.email} id="email" placeholder='Email*' onChange={handleChange} onBlur={handleBlur} />
                         {errors.email && touched.email ? (<p className='formError'>{errors.email}</p>) : null}
                     </div>
                     <div className='FormInput'>
@@ -72,7 +72,7 @@ const Form = () => {
                         </select>
                     </div>
                     <div className='FormInput'>
-                        <input type="tel" name="number" value={values.number} id="number" maxLength={10} placeholder='Phone Number' onChange={handleChange} onBlur={handleBlur} />
+                        <input type="tel" name="number" value={values.number} id="number" maxLength={10} placeholder='Phone Number*' onChange={handleChange} onBlur={handleBlur} />
                         {errors.number && touched.number ? (<p className='formError'>{errors.number}</p>) : null}
                     </div>
                     <div className='FormInput'>

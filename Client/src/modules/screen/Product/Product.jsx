@@ -11,6 +11,7 @@ import productcategory8 from '../../../assets/images/productcategory8.png';
 import productcategory9 from '../../../assets/images/productcategory9.jpg';
 import productcategory10 from '../../../assets/images/productcategory10.jpg';
 import productcategory11 from '../../../assets/images/productcategory11.jpg';
+import Header from '../../../Components/Header/Header';
 
 const Product = () => {
     const { scrollYProgress } = useScroll();
@@ -32,6 +33,7 @@ const Product = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header/>
             <section className='ProductList mb-5'>
                 <div className="container">
                     <div className="Category">

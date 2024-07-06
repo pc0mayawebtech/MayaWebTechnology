@@ -24,6 +24,8 @@ import softdev4 from '../../../assets/images/softdev4.png';
 import softdev5 from '../../../assets/images/softdev5.png';
 import softdev6 from '../../../assets/images/softdev6.png';
 import softdev7 from '../../../assets/images/softdev7.png';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 
 const SoftwareDevelopment = () => {
     const { scrollYProgress } = useScroll();
@@ -45,11 +47,12 @@ const SoftwareDevelopment = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -133,7 +136,7 @@ const SoftwareDevelopment = () => {
                                 <p className='innerMainContent'>As we are a software development agency we need to make sure that we follow all the steps that are required to complete the software development services that one needs. We also make sure to provide one with the solution that they need from scratch. The designing and other needs that have to be fulfilled are completed from our end to serve the customers. We also provide them with endless solutions for their website needs.</p>
                                 <p className='innerMainContent'>We make sure to provide extensive tools and techniques to make the software development services attain success and thats not all we have a team of experts who make sure to understand our customers needs and after that, we fulfil all their demands with our endless software development services solution. We provide all the different types of services that are related to customer’s needs such as SAAS application, fintech software development, app development software, e-commerce application development, and others that a customer need.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -154,7 +157,7 @@ const SoftwareDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Responsive Design</h4>
                                     <p className='methodCont'>We make sure to provide our customers with a responsive design that makes the user and search engines like it. Other than that, the deigning concept is only made after taking the thoughts of our customers so that we can complete their ideas with design. Also, we make sure that the designs created through our end are prospected by the customers so that their ideas are not lost and thats how we serve our web designing services to customers.</p>
                                 </Slide>
@@ -174,7 +177,7 @@ const SoftwareDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='mt-5'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Increase Reach</h4>
                                     <p className='methodCont'>We make sure that whenever we make your website from scratch we complete it in a way that it boosts engagement with the customers. Also, we make sure to provide competitive reach to the customers by providing them with endless solutions with our tools and techniques. We also make sure that we have the required possibilities to provide the customers with reach from our software development services.</p>
                                 </Slide>
@@ -184,7 +187,7 @@ const SoftwareDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Low Cost</h4>
                                     <p className='methodCont'>We make sure that we are able to serve our customers with dedicated web designing services and software development services at a cost that doesn’t feel heavy on their pocket. As a software development firm, we make sure that we provide the customers with the best tools and techniques that want to be dedicated to complete and provide them solution for their needs, not only that it all comes up in a cost that feels true to be real.</p>
                                 </Slide>
@@ -204,7 +207,7 @@ const SoftwareDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Support and Maintenace</h4>
                                     <p className='methodCont'>We as a SAAS development company make it our motto to provide our customers with the endless support and maintenance that they need for their software development services. Whether it is midnight or early morning we always make sure to understand the customer’s satisfactory needs and provide them with the results that they want from us. Not only that we also provide support and maintenance to the software development service that we provide.</p>
                                 </Slide>
@@ -214,7 +217,7 @@ const SoftwareDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Quality Assurance</h4>
                                     <p className='methodCont'>We have a team of experts who make it their responsibility to provide the quality that our customers need. We make sure to adhere to the quality and satisfy it with our driven and proven results from the services. We make sure to use all the tools and techniques that we have to follow up with the quality assurance and make it work more in the long run and that’s not it, we serve all this within the time frame that is given to us.</p>
                                 </Slide>
@@ -234,7 +237,7 @@ const SoftwareDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Enhanced Security</h4>
                                     <p className='methodCont'>It is from our end that we make sure that we provide extra safety to our customers. In all our web designing services whether our customers want software development services or app-building software for their business needs we make sure that we provide it with added security. We have the loosened end of the services so that we can be there to fix any issues that might come up and try to fix them as soon as possible.</p>
                                 </Slide>
@@ -244,7 +247,7 @@ const SoftwareDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Personalization</h4>
                                     <p className='methodCont'>As we are a leading software development agency we make sure that we can personalize our efforts toward the well-being of our customers. We make sure that we listen and understand our customers’s needs and provide them with software development services that are budget-friendly for them and not only that we also make sure that we can work on their given footsteps to provide them with clearer results.</p>
                                 </Slide>

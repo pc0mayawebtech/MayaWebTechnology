@@ -10,6 +10,7 @@ import hardWork from '../../../assets/images/team-member.png';
 import WorkProcess from './WorkProcess/WorkProcess';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-awesome-reveal';
+import Header from '../../../Components/Header/Header';
 const About = () => {
   const { scrollYProgress } = useScroll();
   useEffect(() => {
@@ -30,18 +31,19 @@ const About = () => {
           zIndex: 9999,
         }}
       />
+      <Header />
       <section className='heroWrapper mb-5' style={{ marginTop: '8rem' }}>
         <div className="container">
           <div>
-            <Slide cascade damping={1}>
+            <Slide cascade damping={1} triggerOnce>
               <h2 className='digitalWrapper'>About Us</h2>
             </Slide>
-            <Slide cascade damping={4}>
+            <Slide cascade damping={4} triggerOnce>
               <p className='WrapperContent'>Your Trusted Partner in Digital World !</p>
             </Slide>
           </div>
           <div>
-            <Slide cascade damping={6}>
+            <Slide cascade damping={6} triggerOnce>
               <p className='abtCompany'>
                 We are a crafting web designing and digital marketing agency. We make sure that we can serve our customers with the satisfactory services that they need. We also make sure that we can establish a more powerful space in the market of the brand and website that you have. Whether you want us to create its design or we ourselves create the design that looks perfect we make sure that the web designing services that we offer are the best ones in the market. We are the leading website development and digital marketing company that ought to make sure to cover all our services with the crafting excellence that our experts have.
               </p>
@@ -60,7 +62,7 @@ const About = () => {
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 col-12">
               <div className='whyChooseSum'>
-                <Slide direction='right' cascade damping={10}>
+                <Slide direction='right' cascade damping={10} triggerOnce>
                   <h2 className='chooseHead'>Why Choose Us?</h2>
                 </Slide>
               </div>

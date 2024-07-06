@@ -604,6 +604,6 @@
 
     .companyBrand .photobanner img {
         margin: 0 3em;
-        height: 11vh;
+        height: 11vh !important;
     }
 }

@@ -5,6 +5,7 @@ import { motion, useScroll } from "framer-motion";
 import Form from './Form/Form';
 import EnquiryCard from './EnquiryCard/EnquiryCard';
 import { Slide } from 'react-awesome-reveal';
+import Header from '../../../Components/Header/Header';
 const Contact = () => {
   const { scrollYProgress } = useScroll();
   useEffect(() => {
@@ -25,6 +26,7 @@ const Contact = () => {
           zIndex: 9999,
         }}
       />
+      <Header/>
       <section className='EnquiryMenu mt-5'>
         <div className="container">
           <div className='row'>

@@ -234,6 +234,8 @@
     padding: 1rem;
 }
 
+/***********MEDIA QUERY SECTION START*************/
+
 @media (max-width:991px) {
     .Development .RightDevelopContent .DiscussApp {
         width: 100%;
@@ -276,5 +278,20 @@
     .MobileMethodlogy .spaceMobile {
         margin-bottom: 2rem;
         margin-top: 0rem;
+    }
+}
+
+@media (min-width:400px) {
+    .ServiceVarity .videoContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root .safari_only {
+        margin-top: -5rem;
     }
 }

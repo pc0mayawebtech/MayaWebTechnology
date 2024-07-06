@@ -24,6 +24,8 @@ import designingservice4 from '../../../assets/images/designingservice4.png';
 import designingservice5 from '../../../assets/images/designingservice5.png';
 import designingservice6 from '../../../assets/images/designingservice6.png';
 import designingservice7 from '../../../assets/images/designingservice7.jpeg';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 const WebsiteService = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -44,11 +46,12 @@ const WebsiteService = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const WebsiteService = () => {
                                 <p className='innerMainContent'>A good website displays the careful balance between appearance and functionality. If the website is aesthetically pleasing and fails to offer the information or help the audience with what it looks like then the aesthetics cannot make up for the lack of functionality. Thus, web design comprises two broad key elements- aesthetic or visual elements and functional elements that are of equal importance.</p>
                                 <p className='innerMainContent'>Web design and web development are two terms that are often mixed up. They both mean two different things such as they have different purposes and require a different set of skills to be implemented on a website. We are the best website developers who make sure that we provide web design services and website development services to all our customers and complete their projects with the best web design services and web development services. We also make sure that we are able to provide the customers with their web design services.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -153,7 +156,7 @@ const WebsiteService = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Goals</h4>
                                     <p className='methodCont'>We as a website agency make sure that we make sure that we can understand the needs and ideas of our customers and serve them accordingly. We make sure that we provide customers with website design services that can help them with the ideas getting into reality. We also make sure that as we have the required website designers we can understand our customer’s needs and follow in their footsteps for completing web development services.</p>
                                 </Slide>
@@ -173,7 +176,7 @@ const WebsiteService = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Scope</h4>
                                     <p className='methodCont'>We are a website development company and we ensure that all the services that we provide whether it is web page design, UI UX design, or web development services ensure that we can do that with the fulfillment of the needs of our customers. Not only that we yearn to make the scope of our services to be great so that they can achieve great results. We as a web development service provider make sure that we provide the scope to our customers.</p>
                                 </Slide>
@@ -183,7 +186,7 @@ const WebsiteService = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Creation</h4>
                                     <p className='methodCont'>We make sure that we plan and conceptualize a sitemap and wireframe for all the related web design services that one needs from our end as it will make them trust our services much better. We are a leading website design service provider who makes sure that we can work on the planning and creation of all our customer’s needs gracefully to gain success. We as a web design service provider make sure to conceptualize creation for our customers.</p>
                                 </Slide>
@@ -203,7 +206,7 @@ const WebsiteService = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Content</h4>
                                     <p className='methodCont'>Website designing is not only completed with creating some great web page designs but it is also completed when one is provided with the content that has to be authenticated within the audience. We are a website development near me for anyone looking for web development services and we make sure to provide relevant content to our customers. We provide web development services that ensure healthy content for our customers.</p>
                                 </Slide>
@@ -213,7 +216,7 @@ const WebsiteService = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Visual Elements</h4>
                                     <p className='methodCont'>As a source of various available web page design services, we have the best web design services that one needs. We have the availability of visual elements that make it more graceful to the website with having the relevant UI UX designs and having greater results with them. We make sure that our website designers can serve all our customer’s needs. We as a web design service provider make sure that the tools and techniques are used properly.</p>
                                 </Slide>
@@ -233,7 +236,7 @@ const WebsiteService = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Testing</h4>
                                     <p className='methodCont'>It is a main step that the web design is tested clearly as it ensures that it will be served in the world wide web or stick in the trash. We make sure that our web development services are the ones that are fully tested and then provided to the customers for having the experience of a website designer near me as we make sure to certify the tests that need to be done. We make sure that we as a web design service provider test and then serve our customers.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const WebsiteService = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Launching</h4>
                                     <p className='methodCont'>We make sure that whenever we launch the website it has completed all the tests and primary concerns that it might have in the future. We are a web development company that makes sure that we serve our customers with the best web design services and along with that we ensure to provide them with great results with our web development services. We are a web development service provider who makes sure to launch with the right strategy.</p>
                                 </Slide>

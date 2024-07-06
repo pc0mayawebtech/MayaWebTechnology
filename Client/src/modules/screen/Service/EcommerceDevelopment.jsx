@@ -24,6 +24,8 @@ import developcommerce4 from '../../../assets/images/developcommerce4.png';
 import developcommerce5 from '../../../assets/images/developcommerce5.png';
 import developcommerce6 from '../../../assets/images/developcommerce6.png';
 import developcommerce7 from '../../../assets/images/developcommerce7.jpeg';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 const EcommerceDevelopment = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -44,11 +46,12 @@ const EcommerceDevelopment = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const EcommerceDevelopment = () => {
                                 <p className='innerMainContent'>It is not necessary or recommended that the e-commerce website be built from scratch. There are many available platforms that can help one with creating an e-commerce store with minimal coding or technical skill set that is required from your part. However one needs to determine the platform that is the only thing one needs to do before starting the development process.</p>
                                 <p className='innerMainContent'>We are an e-commerce site development company that makes sure that we can provide our customers with the solutions to the e-commerce development services that they need. We are a website e-commerce development service provider who provides all the solutions for e-commerce development services we have e-commerce website developers who understand the needs of customers and fulfil them with our web development services.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -153,7 +156,7 @@ const EcommerceDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Good UI and UX</h4>
                                     <p className='methodCont'>A successful e-commerce website should have an excellent user interface and user experience design for the help of customers. One needs to make sure that their website is fully responsive, and has the great experience of user experience for shopping to make them stay on one platform. We as an e-commerce development services provider make sure that we provide the UI and UX to the customers for a better website.</p>
                                 </Slide>
@@ -173,7 +176,7 @@ const EcommerceDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Online Security</h4>
                                     <p className='methodCont'>It should be ensured that one has the security of their e-commerce store and the data that it stores or processes. One needs to make sure that they have security access to store their customer information whether it is their financial information or mailing address that customers provide and we make sure to provide that safety with e-commerce development services and provides online safety to them.</p>
                                 </Slide>
@@ -183,7 +186,7 @@ const EcommerceDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Mobile Experience</h4>
                                     <p className='methodCont'>Most online shopping platform users make sure that they provide the mobile experience to the users as they like to shop from there. One who wants to make their e-commerce website mobile-compatible needs to take the web development services from a reputed e-commerce development service provider as they make sure to provide all the e-commerce development services that we make sure to provide to the customers.</p>
                                 </Slide>
@@ -203,7 +206,7 @@ const EcommerceDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Results</h4>
                                     <p className='methodCont'>The focus of an e-commerce website is to get the results that one wants to get with the shopping websites or shopping apps. Our main focus as an e-commerce development agency is to provide our customers with the results that they want to provide to their customers. We make sure that we can provide e-commerce development services and web development services to provide results to the needs.</p>
                                 </Slide>
@@ -213,7 +216,7 @@ const EcommerceDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>SEO</h4>
                                     <p className='methodCont'>The e-commerce website needs to have the use of SEO that can enhance product visibility, and sales by causing the website to rank higher in the search engines. One can utilize different content strategies and techniques to achieve that such as adding keywords and product descriptions to get the site ranked higher than the competitor in search results. One can get e-commerce development services from our end.</p>
                                 </Slide>
@@ -233,7 +236,7 @@ const EcommerceDevelopment = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Quality photos</h4>
                                     <p className='methodCont'>There are photos that can increase the number of products sold. They can help in the building of trust in the products and make the shopping experience better which can lead to increased sales. There are two websites that can sell the same products yet one receives more sellers due to quality photos that can make sure the customers stay on the website and make a purchase and we ensure that through our e-commerce development services.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const EcommerceDevelopment = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Checkout</h4>
                                     <p className='methodCont'>The checkout process in an e-commerce website needs to be smooth as frustrating can lost customers. There are certain times that a website requires to log in which makes the customers lose their concentration and find their product at another place. We as an e-commerce development company ensure that we can provide a smooth checkout process to our customers with our web development services.</p>
                                 </Slide>

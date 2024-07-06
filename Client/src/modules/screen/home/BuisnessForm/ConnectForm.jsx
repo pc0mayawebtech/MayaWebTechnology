@@ -1,12 +1,11 @@
 /* eslint-disable no-undef */
 import './ConnectForm.css';
 import { toast, ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 import { useFormik } from 'formik';
 import { signUpSchema } from './schemas/index.jsx';
 import { db } from '../../../../firebase.config.js';
 import { collection, addDoc } from 'firebase/firestore';
-// import axios from 'axios';
 
 const ConnectForm = () => {
     const dbref = collection(db, 'HomePageForm');

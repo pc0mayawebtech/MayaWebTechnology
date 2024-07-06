@@ -24,6 +24,8 @@ import softwareservice4 from '../../../assets/images/softwareservice4.png';
 import softwareservice5 from '../../../assets/images/softwareservice5.png';
 import softwareservice6 from '../../../assets/images/softwareservice6.png';
 import softwareservice7 from '../../../assets/images/softwareservice7.jpeg';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 const SoftwareTesting = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -43,12 +45,13 @@ const SoftwareTesting = () => {
                     scaleX: scrollYProgress,
                     zIndex: 9999,
                 }}
-            />  wss1u.
+            />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const SoftwareTesting = () => {
                                 <p className='innerMainContent'>There are different types of software testing services that can be classified into multiple categories that are based on test strategies, test objectives, and deliverables. It has been a time when automation testing has become a norm for web development services providers but manual testing is strictly very much needed and used as it can provide the results.</p>
                                 <p className='innerMainContent'>We as a software testing services company make it sure that we can provide our customers with the satisfaction of QA testing and QA automation that can allow them to have security testing in software testing as it can provide them with satisfaction and results. Not only that, we also make sure that selenium testing and selenium automation testing are used properly so that we can provide software quality assurance to our customers with our available best user testing platforms that generate results.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -153,7 +156,7 @@ const SoftwareTesting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Requirement Analysis</h4>
                                     <p className='methodCont'>This stage is about the work that is completed with the involvement of the development process to understand the test requirements. The developer and tester work is very different as the developer will focus on the designing of the code and the tester will find out any errands on the software but overall we make sure to complete the software testing successfully. We have the available best user testing platforms for our customer’s business needs.</p>
                                 </Slide>
@@ -173,7 +176,7 @@ const SoftwareTesting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Online Security</h4>
                                     <p className='methodCont'>This stage is about the planning on how the functionality, usability, and security work in the software, and it can also provide the test scenario and test data that has to be monitored. The test accesses the software quality assurance of the web development services and provides our customers with satisfaction. We have the test management software for our customer’s satisfaction with the planning stage.</p>
                                 </Slide>
@@ -183,7 +186,7 @@ const SoftwareTesting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Development</h4>
                                     <p className='methodCont'>When the scenarios and functionalities are tested it is written in the test cases. In the manual software testing, we have a test management tool for noting the details such as performance, results, findings, and suggestions so that developers can work on that and work on their mistakes and then provide the customers with test management software for making them learn about the best practices of software testing.</p>
                                 </Slide>
@@ -203,7 +206,7 @@ const SoftwareTesting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Execution</h4>
                                     <p className='methodCont'>This stage is about the performance test that has to be done manually or automatically with manual testing or automation testing. The manual testing is suitable when human insights are judged and required, but automation testing is done when it is favourable with repetitive flaws and minor adjustments. We are a web development services provider who makes sure to execute the software and websites correctly.</p>
                                 </Slide>
@@ -213,7 +216,7 @@ const SoftwareTesting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Environment Setup</h4>
                                     <p className='methodCont'>This stage is done parallel with the Development stage. The test environment is about the software and hardware configuration in which the application is tested, including browser, network, hardware, and database server. Our team has the QA automation and QA testing sources that check with the resources used in the development stage and just not that we provide the results with our manual testing and performance test.</p>
                                 </Slide>
@@ -233,7 +236,7 @@ const SoftwareTesting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Closure</h4>
                                     <p className='methodCont'>This stage is when the testers will gather to analyze what they have found in the tests, evaluate them, and take the document key takeaways for future reference. It is very important that the QA automation and QA testing analyse the software testing software process to take the control of all testing activities across all the platforms. We also make sure that we can provide the software quality assurance to our customers with ensured results.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const SoftwareTesting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Support</h4>
                                     <p className='methodCont'>This is the stage that makes us clear about the support that we can provide to our customers. During the web development services that we have we make sure that we can provide the support to our customers from the start to the end and not only that we also make sure that we provide our customers with the security testing in software testing that is required and provides results with our web development services.</p>
                                 </Slide>

@@ -24,6 +24,8 @@ import webservice4 from '../../../assets/images/webservice4.png';
 import webservice5 from '../../../assets/images/webservice5.png';
 import webservice6 from '../../../assets/images/webservice6.png';
 import webservice7 from '../../../assets/images/webservice7.jpeg';
+import Header from '../../../Components/Header/Header';
+import { Link } from 'react-router-dom';
 const WebHosting = () => {
     const { scrollYProgress } = useScroll();
     useEffect(() => {
@@ -44,11 +46,12 @@ const WebHosting = () => {
                     zIndex: 9999,
                 }}
             />
+            <Header />
             <section className='ServiceVarity mb-5'>
                 <div id="videoheader" className="videoheader">
                     <div className="videoBgWrap">
                         <div className="videoOverlay"></div>
-                        <video id="video-bg-elem" preload="auto" autoPlay="true" muted="muted" loop="loop">
+                        <video id="video-bg-elem" preload="auto" autoPlay muted="muted" loop="loop">
                             <source src={servicevideo} type="video/mp4" className="bannerVideo" />
                         </video>
                     </div>
@@ -132,7 +135,7 @@ const WebHosting = () => {
                                 <p className='innerMainContent'>When one creates an account with the web development services one can get space for the website or web application on the website service hosting provider. One can easily access and manage the space from the hosting account dashboard. The benefit of website hosting services is one in which one can get access to sources such as CPU, RAM, and bandwidth.</p>
                                 <p className='innerMainContent'>The percentage of server resources that you receive depends on the type of web hosting service you choose. It should be known that choosing a web hosting service is similar to choosing a web development service. One can easily start with free web hosting on a server that one can share with several other websites or web applications. One can easily upgrade with exclusive web server access or rent the entire server.</p>
                                 <div>
-                                    <button className='DiscussApp'><span>Let us Discuss</span></button>
+                                    <Link to="/app/contact" style={{ textDecoration: "none" }}><button className='DiscussApp'><span>Let us Discuss</span></button></Link>
                                 </div>
                             </div>
                             <div className='row'>
@@ -153,7 +156,7 @@ const WebHosting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Requirement</h4>
                                     <p className='methodCont'>We make sure that we can understand the needs of our customers and provide them with the best hosting services in the overall web development services that they take with us. This step is about understanding the needs of the customers and we made sure that we can follow in the footsteps of our customers and understand their needs and support through our complete web hosting services that include best web hosting services.</p>
                                 </Slide>
@@ -173,7 +176,7 @@ const WebHosting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Easy Process</h4>
                                     <p className='methodCont'>As we have the relevant tools and techniques from a pool of web hosting we make sure that we can easily provide our customers with the benefit of best hosting and domain provider so that they easily can enjoy the full web development services from our end and can get the benefit of hosting server and hosting provider as we have solutions for that too which can make them having the right services easily.</p>
                                 </Slide>
@@ -183,7 +186,7 @@ const WebHosting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Personalization</h4>
                                     <p className='methodCont'>It is clear that one wants a name of their own that can easily reflect their brand and services and to provide the privilege of that we as a website hosting services provider make it very clear that we can provide our customers with their like name whether it is for web hosting, cloud computing or any other related thing that their website needs for having their ideas in the right place with best hosting and domain provider services.</p>
                                 </Slide>
@@ -203,7 +206,7 @@ const WebHosting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Responsiveness</h4>
                                     <p className='methodCont'>One always likes to get responsiveness for their website and brand that they have so that more and more people can learn about that and stay connected with it without forgetting the original concepts. We as a web development service provider make sure that we can provide our customers with the satisfaction of having responsiveness of their website or brand with the right website hosting services that we have available.</p>
                                 </Slide>
@@ -213,7 +216,7 @@ const WebHosting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Registration</h4>
                                     <p className='methodCont'>It is the main step in making the name accessible on the World Wide Web as it will provide a presentation there. It requires both a web hosting service provider and a registered domain name to make the name accessible easily. One can easily choose the name that they want and then we as a hosting provider make sure to provide our customers with the solution to that name with the web hosting services.</p>
                                 </Slide>
@@ -233,7 +236,7 @@ const WebHosting = () => {
                         </div>
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='right'>
+                                <Slide direction='right' triggerOnce>
                                     <h4 className='methodHead'>Support</h4>
                                     <p className='methodCont'>As we are one of the leading website hosting companies we make sure that we can easily provide our customers with the service and support that they need for their problems with the web hosting services that the customers need. We as a website hosting services provider and hosting provider make sure that we can provide our customers with the satisfaction of trust that we can provide with web designing services support.</p>
                                 </Slide>
@@ -243,7 +246,7 @@ const WebHosting = () => {
                     <div className="row">
                         <div className="col-lg-7 mt-5 mt-sm-0">
                             <div className='spaceMobile'>
-                                <Slide direction='left'>
+                                <Slide direction='left' triggerOnce>
                                     <h4 className='methodHead'>Results</h4>
                                     <p className='methodCont'>We are one of the best website hosting companies that makes sure to provide our customers with the result of web development services that they take from us. We as a web hosting service provider make sure that we can provide great satisfaction to our customers with our endless top web hosting services and the best hosting services that we have as a website provider in the market and serve the results.</p>
                                 </Slide>
