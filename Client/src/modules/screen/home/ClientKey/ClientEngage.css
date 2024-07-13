@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.keyBox .cardBox {
+    background-color: #FBD1C6;
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.keyBox .cardBox:hover {
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
+    background-color: var(--white);
+}
+
+.keyBox .cardBox .keyHead {
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.keyBox .cardBox .keyCont {
+    color: var(--black);
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+@media (max-width:991px) {
+    .keyBox .cardBox {
+        top: 2.6rem;
+    }
+}

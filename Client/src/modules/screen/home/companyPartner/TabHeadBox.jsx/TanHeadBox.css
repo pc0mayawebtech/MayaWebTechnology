@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.outerBoxSameLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.TabHeadBox .tabboxlist {
+    padding: 10px;
+    pointer-events: none;
+    border-right: 1px solid var(--red);
+}
+
+.TabHeadBox .tabboxlist .outerWrapper img {
+    width: 100%;
+    height: auto;
+    margin-right: 5px;
+}

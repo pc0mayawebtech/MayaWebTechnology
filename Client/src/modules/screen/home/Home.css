@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+}
+
+.TopMarketConsult {
+    background-image: url('../../../assets/images/topbannerbglogo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+.TopMarketConsult .companyInfo .leftMarketInfo {
+    font-size: 3.7rem;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1.3;
+    margin-bottom: 1.4rem;
+}
+
+.TopMarketConsult .companyInfo .leftKnowledgeVariety {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.TopMarketConsult .siteReview .DiscussSite {
+    display: block;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    border: none;
+    color: var(--red);
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .30s ease-in-out;
+    box-shadow: 0px 0px 0.9px 0.8px;
+}
+
+.TopMarketConsult .siteReview .DiscussSite span {
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.TopMarketConsult .siteReview .DiscussSite::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--red);
+    transition: all .35s;
+    border-radius: 6px !important;
+}
+
+.TopMarketConsult .siteReview .DiscussSite:hover {
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.TopMarketConsult .siteReview .DiscussSite:hover:after {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.TopMarketConsult .thumblogo1 {
+    height: 440px;
+    width: 440px;
+    margin: auto;
+    border: 1px dashed blue;
+    border-radius: 50%;
+    position: relative;
+    animation: slider 1s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: scale(2);
+        transition: all .5s ease-in-out;
+    }
+}
+
+
+@keyframes slider {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.TopMarketConsult .slide {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+}
+
+.TopMarketConsult .carousel-inner {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    z-index: 99999;
+}
+
+.TopMarketConsult .carousel-inner .carousel-item img {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+
+.TopMarketConsult .thumblogo1 .thumb-shape-1 img {
+    position: absolute;
+    right: 45px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.TopMarketConsult .thumblogo1 .thumb-shape-2 img {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 45px;
+    opacity: 0.7;
+}
+
+/*************TRUSTED BRAND SECTION START*************/
+.TrustedPartner {
+    margin-bottom: 6rem;
+}
+
+.TrustedPartner .partnerTrust {
+    text-align: center;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.TrustedPartner .brandSignigicance {
+    color: var(--red);
+    font-weight: 700;
+    text-align: center;
+}
+
+/***********SOFTWARE SERVICE SECTION START*************/
+.SoftwareService .ServiceHead {
+    text-align: center;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.SoftwareService .devlopmentprovide {
+    color: var(--red);
+    font-weight: 700;
+    text-align: center;
+}
+
+/***********CHOOSE US SECTION START***********/
+.ChooseUs .peopleTrust {
+    position: sticky;
+    top: 8rem;
+}
+
+.ChooseUs .peopleTrust .trustInfoHead {
+    color: var(--black);
+    font-weight: 700;
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+}
+
+.ChooseUs .peopleTrust .chooseWise {
+    color: var(--red);
+    font-weight: 700;
+    text-align: justify;
+}
+
+.ChooseUs .peopleTrust .trustInfoCont {
+    color: var(--black);
+    max-width: 450px;
+    font-weight: 400;
+    word-spacing: 2px;
+    margin-bottom: 2.5rem;
+}
+
+.ChooseUs .peopleTrust .ConnectWith {
+    display: block;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    border: none;
+    color: var(--red);
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .30s ease-in-out;
+    box-shadow: 0px 0px 0.9px 0.8px;
+}
+
+.ChooseUs .peopleTrust .ConnectWith span {
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.ChooseUs .peopleTrust .ConnectWith::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--red);
+    transition: all .35s;
+    border-radius: 6px !important;
+}
+
+.ChooseUs .peopleTrust .ConnectWith:hover {
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.ChooseUs .peopleTrust .ConnectWith:hover:after {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* .ChooseUs .ChooseCardBox {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.ChooseUs .ChooseCardBox::-webkit-scrollbar {
+    display: none;
+} */
+
+
+/***********INDUSTRY SERVED SECTION START************/
+.IndustriesWorked .aboutIndustryHead {
+    text-align: center;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.IndustriesWorked .mainHeadInfo {
+    text-align: center;
+    font-weight: 700;
+    color: var(--red);
+}
+
+/**********COMPANY ACHIVEMENT SECTION START***********/
+.Achivements {
+    background: url('../../../assets/images/achivementdesignbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.Achivements .AchivementHead {
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+}
+
+.Achivements .InnerWrapperCont .addInfo {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.Achivements .subInnerBulletCont ul {
+    padding-left: 1rem;
+}
+
+.Achivements .subInnerBulletCont ul li {
+    list-style-type: disc;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.Achivements .AchivementDeliver {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.Achivements .AchivementDeliver .projectCount {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+}
+
+.Achivements .AchivementDeliver .ProjectStatus {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 0rem;
+    font-size: 0.9rem;
+}
+
+.Achivements .LetStarted {
+    background: linear-gradient(#790f30, #cf79bc);
+    padding: 0.5rem 0.9rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 20%;
+    margin: 3rem auto;
+    display: block;
+    font-size: 1.4rem;
+}
+
+/*************CLIENT ENGAGEMENT SECTION START*************/
+.ClientEngagement {
+    background-color: var(--red);
+    font-weight: 700;
+    padding: 2rem;
+    width: 100%;
+}
+
+.ClientEngagement .outerClientBox {
+    position: relative;
+}
+
+.ClientEngagement .outerClientBox .keyPointHead {
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+}
+
+.ClientEngagement .outerClientBox .productiveWay {
+    background-color: #F1EDEC;
+    font-weight: 600;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--black);
+}
+
+.ClientEngagement .outerClientBox .productContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/**************SUCCESS PORTFOLIO SECTION START*************/
+.Portfolio .successHead {
+    text-align: center;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.Portfolio .successCont {
+    text-align: center;
+    color: var(--red);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/************CHAT WITH US SECTION START***********/
+.ChatUs {
+    background-color: var(--fadepink);
+    font-weight: 700;
+    padding: 2rem;
+    width: 100%;
+}
+
+.ChatUs .serviceHeadInfo {
+    font-size: 1.5rem;
+    color: var(--red);
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.ChatUs .ConnectLogoIllustrate {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.ChatUs .BuisnessTagLine {
+    font-size: 2.2rem;
+    color: var(--red);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2;
+    line-height: 1.5;
+}
+
+.ChatUs .addInfoLine {
+    font-size: 2.2rem;
+    color: var(--yellow);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2;
+    margin-bottom: 0rem;
+}
+
+/************FAQ SECTION START***********/
+.FAQ .faqHead {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+}
+
+.FAQ .InnerfaqHead {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--red);
+    text-align: center;
+}
+
+/***********GET TOUCH SECTION START************/
+.getTouch .getTouchHead {
+    color: var(--red);
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.getTouch .getTouchCont {
+    text-align: center;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.getTouch .getConversation {
+    display: block;
+    font-weight: 700;
+    padding: 0.7rem 0.9rem;
+    border-radius: 6px;
+    background-color: var(--white);
+    border: none;
+    box-shadow: 0px 0px 0.9px 0.8px;
+    margin: auto;
+    color: var(--red);
+    outline: none;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all .20s ease-in-out;
+    text-decoration: none;
+}
+
+.getTouch .getConversation span {
+    position: relative;
+    z-index: 2;
+}
+
+.getTouch .getConversation:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--red);
+    transition: all .35s;
+    border-radius: 6px !important;
+}
+
+.getTouch .getConversation:hover {
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.getTouch .getConversation:hover:after {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/*************MEDIA QUERY SECTION START*************/
+@media(max-width:991px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .Achivements .AchivementDeliver {
+        display: block;
+        text-align: start;
+    }
+
+    .Achivements .LetStarted {
+        width: 100%;
+    }
+
+    .getTouch .getConversation {
+        width: 100%;
+    }
+
+    .ChatUs .ConnectLogoIllustrate {
+        width: 100%;
+        margin-top: 1.5rem;
+        height: auto;
+    }
+
+    .TrustedPartner {
+        margin-bottom: 0rem;
+    }
+
+    .ClientEngagement {
+        padding-bottom: 5rem;
+    }
+
+    .ClientEngagement .outerClientBox .productiveWay {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: 2.4rem;
+    }
+
+    .ClientEngagement .outerClientBox .productContent {
+        font-size: 1rem;
+    }
+
+
+    .TopMarketConsult .companyInfo .leftMarketInfo {
+        font-size: 3.2rem;
+    }
+
+    .TopMarketConsult .thumblogo1 {
+        height: 340px;
+        width: 340px;
+        margin: auto;
+        border: 1px dashed blue;
+        border-radius: 50%;
+        position: relative;
+        animation: slider 1s infinite alternate;
+        z-index: -1;
+    }
+
+    .TopMarketConsult .carousel-inner .carousel-item img {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        margin: 0px;
+        position: fixed;
+    }
+
+    .companyBrand .photobanner img {
+        margin: 0 3em;
+        height: 11vh !important;
+    }
+}

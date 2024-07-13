@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.SignUp .signHead {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.SignUp .formWrapper .labelControl {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.SignUp .formWrapper .formControl {
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.SignUp .submitway {
+    display: block;
+    background-color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    color: var(--red);
+    outline: none;
+    position: relative;
+    border: 1px solid var(--white);
+    letter-spacing: 2px;
+    transition: all .30s ease-in-out;
+}
+
+.SignUp .submitway span {
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.SignUp .submitway::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--red) !important;
+    transition: all .35s;
+    border-radius: 6px !important;
+}
+
+.SignUp .submitway:hover {
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.SignUp .submitway:hover:after {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.SignUp .formWrapper .formError {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.displayMessage {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/*************MEDIA QUERY SECTION START*************/
+
+@media (max-width:991px) {
+    .SignUp .submitway {
+        width: 100%;
+    }
+
+    .SignUp .radioWrapper {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .SignUp .FormWrapper {
+        margin-bottom: 1rem;
+    }
+}

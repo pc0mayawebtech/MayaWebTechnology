@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.DevMobileCard .devCard {
+    text-align: center;
+    box-shadow: 0 30px 62px 0 rgba(0, 0, 0, .15);
+    display: block;
+    border-radius: 8px;
+    position: relative;
+    background-color: var(--white);
+    padding: 1.4rem;
+}
+
+.DevMobileCard .devCard:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .22) !important;
+    transition: all .6s ease-in-out;
+    -webkit-transition: .6s;
+}
+
+.DevMobileCard .devCard img {
+    width: 40%;
+    margin-bottom: 1.5rem;
+    animation: popUp 3s infinite alternate;
+}
+
+@keyframes popUp {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.DevMobileCard .devCard .appTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.DevMobileCard .devCard .appCont {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 500;
+    letter-spacing: 2px;
+}

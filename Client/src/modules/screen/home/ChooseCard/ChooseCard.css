@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardChoose .chooseCard {
+    background: url(../../../../assets/images/formbglogo.png);
+    font-weight: 600;
+    padding: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardChoose .chooseCard .boxWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cardChoose .chooseCard .boxWrapper .cardlogo img {
+    width: 100%;
+    height: auto;
+}
+
+.cardChoose .chooseCard .boxWrapper .CardBox {
+    background-color: var(--red);
+    font-weight: 700;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+
+.trustLogo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.cardChoose .chooseCard .boxWrapper .CardBox .trustLogo img {
+    width: 20%;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.cardChoose .chooseCard .boxWrapper .CardBox .cardBoxHead {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.cardChoose .chooseCard .boxWrapper .CardBox .cardBoxCont {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cpyCardBox {
+    margin-left: -5rem;
+}
+
+/*************MEDIA QUERY SECTION START*************/
+@media(max-width:991px) {
+    .cardChoose .chooseCard .boxWrapper .CardBox .cardBoxCont {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 0.9rem;
+        max-width: 600px;
+    }
+}

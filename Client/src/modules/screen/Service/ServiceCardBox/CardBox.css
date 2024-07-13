@@ -1,0 +1,95 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.ServiceProvided .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 6px;
+}
+
+.ServiceProvided .flip-card .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.ServiceProvided .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.ServiceProvided .flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ServiceProvided .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.ServiceProvided .flip-card-front {
+    background-color: transparent;
+    color: var(--black);
+    border-radius: 6px;
+}
+
+.ServiceProvided .flip-card-back {
+    background: var(--red);
+    color: var(--white);
+    transform: rotateY(180deg);
+    border-radius: 6px;
+    transition: all .8s ease-in-out;
+}
+
+.ServiceProvided .flip-card-back .Inner-flip-card-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0rem 2rem;
+}
+
+.ServiceProvided .flip-card-back .Inner-flip-card-back .ServiceName {
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.ServiceProvided .flip-card-back .Inner-flip-card-back .ServiceName:after {
+    content: '';
+    left: 0;
+    bottom: -10px;
+    background: var(--black);
+    width: 50px;
+    height: 2px;
+    position: absolute;
+}
+
+.ServiceProvided .flip-card-back .Inner-flip-card-back .ServiceCont {
+    text-align: start;
+    font-weight: 400;
+}
+
+.ServiceProvided .flip-card .flip-card-back:hover .Inner-flip-card-back .ServiceName:after {
+    width: 100%;
+    transition: all .8s ease-in-out;
+}

@@ -1,0 +1,244 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.NavBar {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 80px;
+}
+
+.TopFixedNav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.NavBar .weblogo img {
+    width: 100px;
+    mix-blend-mode: multiply;
+    height: 100px;
+}
+
+.NavBar .navigatebar ul {
+    list-style: none;
+    margin-bottom: 0rem;
+}
+
+.NavBar .navigatebar ul li {
+    position: relative;
+    float: left;
+}
+
+.NavBar .navigatebar ul li a {
+    font-size: 1.1rem;
+    color: var(--red);
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.NavBar .navigatebar ul li a:hover {
+    color: red;
+    font-weight: 700;
+    transition: all .5s ease-in-out;
+}
+
+.NavBar .navigatebar ul li ul {
+    position: absolute;
+    left: 0px;
+    width: 200px;
+    background: var(--lightpink);
+    padding-left: 0rem;
+    text-align: center;
+    display: none;
+}
+
+.NavBar .navigatebar ul li ul li {
+    width: 100%;
+    padding: 1px;
+}
+
+.NavBar .navigatebar ul li ul li a {
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+.NavBar .navigatebar ul li ul li a:hover {
+    background-color: var(--red);
+    color: var(--white);
+    transition: all .5s ease-in-out;
+    width: 100%;
+}
+
+.NavBar .navigatebar ul li:focus-within>,
+.NavBar .navigatebar ul li:hover>ul {
+    display: initial;
+}
+
+#logo {
+    display: none;
+}
+
+.NavBar .navigatebar .connectWith {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: popUp 2s infinite alternate;
+    margin-top: 1rem;
+}
+
+.NavBar .navigatebar .NavMenuLists .ReachUs {
+    display: inline;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.7rem 2rem;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    color: var(--red);
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .30s ease-in-out;
+    box-shadow: 0px 0px 0.9px 0.8px;
+}
+
+.NavBar .navigatebar .NavMenuLists span {
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.NavBar .navigatebar .NavMenuLists .ReachUs::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--red);
+    transition: all .35s;
+    border-radius: 6px !important;
+}
+
+.NavBar .navigatebar .NavMenuLists .ReachUs:hover {
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.NavBar .navigatebar .NavMenuLists .ReachUs:hover:after {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.innersect {
+    display: none;
+}
+
+.innersectOpen {
+    display: block;
+}
+
+.navigatebar ul li:hover .innersect,
+.navigatebar ul li .innersect:focus-within {
+    display: block;
+}
+
+
+@media screen and (max-width:991px) {
+    .NavBar {
+        padding: 10px;
+        height: 80px;
+    }
+
+    #logo {
+        display: initial;
+    }
+
+    .NavBar label {
+        display: initial;
+    }
+
+    .NavBar .navigatebar {
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        background: var(--lightpink);
+        height: 100vh !important;
+        border-top: 1px solid #000;
+        display: none;
+    }
+
+    .NavBar .navigatebar ul {
+        padding-left: 0rem;
+    }
+
+    .NavBar .navigatebar ul li {
+        width: 100%;
+    }
+
+    .NavBar .navigatebar ul li .innersect {
+        position: relative;
+        width: 100%;
+    }
+
+    .NavBar .navigatebar ul li ul li {
+        background: #eee;
+    }
+
+    .NavBar .navigatebar .connectWith {
+        margin-left: 1rem;
+    }
+
+    .NavBar .navigatebar {
+        display: none;
+    }
+
+    .visa-service {
+        display: none;
+    }
+
+    .not-active {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .NavBar .navigatebar ul li ul li a:hover {
+        background-color: var(--red);
+        color: var(--white);
+        transition: all .5s ease-in-out;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigatebar ul li .innersect {
+        display: none;
+    }
+}
